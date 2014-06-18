@@ -28,7 +28,7 @@ function onDeviceReady() {
 	// Now safe to use device APIs
 	alert('CARICAMENTO TERMINATO');
 }
-alert('hello');
+alert('pippo');
 	
 navigator.geolocation.getCurrentPosition(onSuccess, onError);
 	alert(device.platform);
