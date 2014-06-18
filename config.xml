@@ -8,12 +8,12 @@ versionCode = "10" >
 
 <!-- versionCode is optional and Android only -->
 
-<preference name="phonegap-version" value="3.1.0" />
+<preference name="phonegap-version" value="3.3.0" />
 
-<name>Sample Config.xml</name>
+<name>GD-Soft FrameWork</name>
 
 <description>
-An example for phonegap build docs. 
+Test FrameWork GD-Soft per APP online
 </description>
 
 <author href="http://www.gd-soft.it" email="info@gd-soft.it">
