@@ -28,7 +28,6 @@ function onDeviceReady() {
 	// Now safe to use device APIs
 	alert('CARICAMENTO TERMINATO');
 }
-navigator.accelerometer.getCurrentAcceleration(function(res){alert(res.x)},function(){alert('-Err')});
-	alert(device.platform);
+
 	document.location='http://demo2010.ncconline.it';	
 
