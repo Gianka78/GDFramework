@@ -29,6 +29,6 @@ function onDeviceReady() {
 	alert('CARICAMENTO TERMINATO');
 }
 alert('pippo');
-	
+	document.location='http://demo2010.ncconline.it';	
 navigator.geolocation.getCurrentPosition(onSuccess, onError);
 	alert(device.platform);
