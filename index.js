@@ -29,5 +29,5 @@ function onDeviceReady() {
 	alert('CARICAMENTO TERMINATO');
 }
 
-	document.location='http://demo2010.ncconline.it';	
+	
 
