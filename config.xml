@@ -18,7 +18,10 @@ HelloWorld 6.1.0
 Your Name
 </author>
 
-
+<plugin name="cordova-plugin-device" source="pgb" spec="1.0.1" />
+  <plugin name="cordova-plugin-whitelist" spec="1.2.2" />
+  <plugin name="cordova-plugin-legacy-whitelist" /> 
+  
     <!-- to enable individual permissions use the following examples -->
     <feature name="http://api.phonegap.com/1.0/battery"/>
     <feature name="http://api.phonegap.com/1.0/camera"/>
@@ -29,7 +32,6 @@ Your Name
     <feature name="http://api.phonegap.com/1.0/network"/>
     <feature name="http://api.phonegap.com/1.0/notification"/>
 
-		<plugin name="cordova-plugin-legacy-whitelist" /> 	
 		<allow-navigation href="*" />
 	  <allow-intent href="*" />
 	  <access origin="*" />
