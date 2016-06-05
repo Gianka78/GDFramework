@@ -29,7 +29,7 @@ Your Name
     <feature name="http://api.phonegap.com/1.0/network"/>
     <feature name="http://api.phonegap.com/1.0/notification"/>
 
-		<plugin name="cordova-plugin-whitelist" spec="1.2.2" />	
+		<plugin name="cordova-plugin-legacy-whitelist" /> 	
 		<allow-navigation href="*" />
 	  <allow-intent href="*" />
 	  <access origin="*" />
