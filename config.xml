@@ -31,7 +31,9 @@ Your Name
     <feature name="http://api.phonegap.com/1.0/media"/>
     <feature name="http://api.phonegap.com/1.0/network"/>
     <feature name="http://api.phonegap.com/1.0/notification"/>
-
+<gap:config-file platform="ios" parent="UIViewControllerBasedStatusBarAppearance" overwrite="true">
+    <false/>
+  </gap:config-file>
 		<allow-navigation href="*" />
 	  <allow-intent href="*" />
 	  <access origin="*" />
