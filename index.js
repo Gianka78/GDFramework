@@ -31,16 +31,23 @@ function onLoad() {
 	    	log("defaults");
 	    	cordova.plugins.backgroundMode.onactivate = function () {
 		    	log("activate");
-		    	setInterval(function () {
+		    	/*setInterval(function () {
 		            var d=new Date();
 		            log("" + d.toTimeString());
 		            cordova.plugins.backgroundMode.configure({
 		                text:'Running in background for more than 5s now.'
 		            });
-		        }, 5000);
+		        }, 5000);*/
 		}
 		cordova.plugins.backgroundMode.enable();
 		log("enable");
 	    	
+	    	setInterval(function () {
+	            var d=new Date();
+	            log("" + d.toTimeString());
+	            cordova.plugins.backgroundMode.configure({
+	                text:'Running in background for more than 5s now.'
+	            });
+	        }, 5000);
 	});
 }
