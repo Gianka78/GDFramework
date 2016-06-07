@@ -29,8 +29,6 @@ function onLoad() {
 		log("deviceReady");
 	    	cordova.plugins.backgroundMode.setDefaults({ text:'Doing heavy tasks.'});
 	    	log("defaults");
-	    	cordova.plugins.backgroundMode.enable();
-		log("enable");
 	    	cordova.plugins.backgroundMode.onactivate = function () {
 		    	log("activate");
 		    	setInterval(function () {
@@ -41,5 +39,8 @@ function onLoad() {
 		            });
 		        }, 5000);
 		}
+		cordova.plugins.backgroundMode.enable();
+		log("enable");
+	    	
 	});
 }
