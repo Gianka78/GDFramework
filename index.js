@@ -23,10 +23,10 @@ function onError(error) {
 function onLoad() {
 	alert('CARICAMENTO TERMINATO');
 	// Now safe to use device APIs
-	/*document.addEventListener('deviceready', function () {
+	document.addEventListener('deviceready', function () {
 		alert('device ready');
 	    
-	    	cordova.plugins.backgroundMode.setDefaults({ text:'Doing heavy tasks.'});
+	/*    	cordova.plugins.backgroundMode.setDefaults({ text:'Doing heavy tasks.'});
 	    	cordova.plugins.backgroundMode.enable();
 		cordova.plugins.backgroundMode.onactivate = function () {
 		    	alert("bg attivo");
@@ -38,8 +38,8 @@ function onLoad() {
 		                text:'Running in background for more than 5s now.'
 		            });
 		        }, 5000);
-		}
-	});*/
+		}*/
+	});
 }
     
 
