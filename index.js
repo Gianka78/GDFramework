@@ -27,6 +27,9 @@ function onLoad() {
 function onDeviceReady() {
 	// Now safe to use device APIs
 	alert('CARICAMENTO TERMINATO');
+	app.controller('BackgroundController', function($scope) {
+ 
+	});
 }
 
 	
