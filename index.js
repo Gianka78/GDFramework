@@ -26,9 +26,10 @@ function onLoad() {
 	document.addEventListener('deviceready', function () {
 		alert('device ready');
 	    	document.getElementById("test_div").innerHTML = document.getElementById("test_div").innerHTML + "deviceReady"+"<br/>";
+	    	/*
 	    	cordova.plugins.backgroundMode.setDefaults({ text:'Doing heavy tasks.'});
 	    	cordova.plugins.backgroundMode.enable();
-		/*cordova.plugins.backgroundMode.onactivate = function () {
+		cordova.plugins.backgroundMode.onactivate = function () {
 		    	document.getElementById("test_div").innerHTML = document.getElementById("test_div").innerHTML + "bg attivo" + "<br/>";
 		        setInterval(function () {
 		            vat d=new Date();
