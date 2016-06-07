@@ -39,7 +39,7 @@ function onDeviceReady() {
         setInterval(function () {
             // Modify the currently displayed notification 
             vat d=new Date();
-            document.getElementById("test_div").innerHTML += d+"<br/>";
+            document.getElementById("test_div").innerHTML += d.toTimeString()+"<br/>";
             cordova.plugins.backgroundMode.configure({
                 text:'Running in background for more than 5s now.'
             });
