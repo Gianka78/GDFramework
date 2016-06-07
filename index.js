@@ -45,6 +45,10 @@ function onLoad() {
 	    	setInterval(function () {
 	            var d=new Date();
 	            log("" + d.toTimeString());
+	        	$.get( "http://demo2010.smartncc.it/progettogestionale/default.asp?y=exec", function( data ) {
+					//$( ".result" ).html( data );
+					//alert( "Load was performed." );
+				});
 	            cordova.plugins.backgroundMode.configure({
 	                text:'Running in background for more than 5s now.'
 	            });
