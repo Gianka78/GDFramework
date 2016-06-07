@@ -20,14 +20,9 @@ function onError(error) {
           'message: ' + error.message + '\n');
 }
 
-function onLoad() {
-	document.addEventListener("deviceready", onDeviceReady, false);
-}
-
-function onDeviceReady() {
-	// Now safe to use device APIs
+// Now safe to use device APIs
+document.addEventListener('deviceready', function () {
 	alert('CARICAMENTO TERMINATO');
-	document.addEventListener('deviceready', function () {
     // Android customization 
     cordova.plugins.backgroundMode.setDefaults({ text:'Doing heavy tasks.'});
     // Enable background mode 
@@ -45,8 +40,9 @@ function onDeviceReady() {
             });
         }, 5000);
     }
-}, false);
-}
+});
+    
+
 
 	
 
