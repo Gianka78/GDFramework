@@ -25,11 +25,11 @@ function onLoad() {
 	// Now safe to use device APIs
 	document.addEventListener('deviceready', function () {
 		alert('device ready');
-	    	document.getElementById("test_div").innerHTML = document.getElementById("test_div").innerHTML + "deviceReady"+"<br/";
+	    	document.getElementById("test_div").innerHTML = document.getElementById("test_div").innerHTML + "deviceReady"+"<br/>";
 	    	cordova.plugins.backgroundMode.setDefaults({ text:'Doing heavy tasks.'});
 	    	cordova.plugins.backgroundMode.enable();
-		cordova.plugins.backgroundMode.onactivate = function () {
-		    	alert("bg attivo");
+		/*cordova.plugins.backgroundMode.onactivate = function () {
+		    	document.getElementById("test_div").innerHTML = document.getElementById("test_div").innerHTML + "bg attivo" + "<br/>";
 		        setInterval(function () {
 		            vat d=new Date();
 		            document.getElementById("test_div").innerHTML = document.getElementById("test_div").innerHTML + d.toTimeString()+"<br/>";
@@ -37,11 +37,6 @@ function onLoad() {
 		                text:'Running in background for more than 5s now.'
 		            });
 		        }, 5000);
-		}
+		}*/
 	});
 }
-    
-
-
-	
-
