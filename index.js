@@ -23,23 +23,20 @@ function onError(error) {
 // Now safe to use device APIs
 document.addEventListener('deviceready', function () {
 	alert('CARICAMENTO TERMINATO');
-    // Android customization 
-    cordova.plugins.backgroundMode.setDefaults({ text:'Doing heavy tasks.'});
-    // Enable background mode 
-    cordova.plugins.backgroundMode.enable();
- 
-    // Called when background mode has been activated 
-    cordova.plugins.backgroundMode.onactivate = function () {
-    	alert("bg attivo");
-        setInterval(function () {
-            // Modify the currently displayed notification 
-            vat d=new Date();
-            document.getElementById("test_div").innerHTML += d.toTimeString()+"<br/>";
-            cordova.plugins.backgroundMode.configure({
-                text:'Running in background for more than 5s now.'
-            });
-        }, 5000);
-    }
+    
+    	cordova.plugins.backgroundMode.setDefaults({ text:'Doing heavy tasks.'});
+    	cordova.plugins.backgroundMode.enable();
+	cordova.plugins.backgroundMode.onactivate = function () {
+	    	alert("bg attivo");
+	        setInterval(function () {
+	            // Modify the currently displayed notification 
+	            vat d=new Date();
+	            document.getElementById("test_div").innerHTML += d.toTimeString()+"<br/>";
+	            cordova.plugins.backgroundMode.configure({
+	                text:'Running in background for more than 5s now.'
+	            });
+	        }, 5000);
+	}
 });
     
 
