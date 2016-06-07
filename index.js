@@ -21,9 +21,10 @@ function onError(error) {
 }
 
 function onLoad() {
+	alert('CARICAMENTO TERMINATO');
 	// Now safe to use device APIs
 	document.addEventListener('deviceready', function () {
-		alert('CARICAMENTO TERMINATO');
+		alert('device ready');
 	    
 	    	cordova.plugins.backgroundMode.setDefaults({ text:'Doing heavy tasks.'});
 	    	cordova.plugins.backgroundMode.enable();
