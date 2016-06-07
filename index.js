@@ -35,8 +35,11 @@ function onDeviceReady() {
  
     // Called when background mode has been activated 
     cordova.plugins.backgroundMode.onactivate = function () {
-        setTimeout(function () {
+    	alert("bg attivo");
+        setInterval(function () {
             // Modify the currently displayed notification 
+            vat d=new Date();
+            document.getElementById("test_div").innerHTML += d+"<br/>";
             cordova.plugins.backgroundMode.configure({
                 text:'Running in background for more than 5s now.'
             });
