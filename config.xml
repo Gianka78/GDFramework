@@ -18,10 +18,12 @@ HelloWorld 6.1.0
 Your Name
 </author>
 
-<plugin name="cordova-plugin-device" source="pgb" spec="1.0.1" />
+  <plugin name="cordova-plugin-device" source="pgb" spec="1.0.1" />
   <plugin name="cordova-plugin-whitelist" spec="1.2.2" />
   <plugin name="cordova-plugin-legacy-whitelist" /> 
   <gap:plugin name="cordova-plugin-appinfo" source="npm"/>
+  <gap:plugin name="de.appplant.cordova.plugin.background-mode" version="0.6.3" />
+
   
     <!-- to enable individual permissions use the following examples -->
     <feature name="http://api.phonegap.com/1.0/battery"/>
@@ -32,11 +34,13 @@ Your Name
     <feature name="http://api.phonegap.com/1.0/media"/>
     <feature name="http://api.phonegap.com/1.0/network"/>
     <feature name="http://api.phonegap.com/1.0/notification"/>
-<gap:config-file platform="ios" parent="UIViewControllerBasedStatusBarAppearance" overwrite="true">
+    
+    <gap:config-file platform="ios" parent="UIViewControllerBasedStatusBarAppearance" overwrite="true">
     <false/>
-  </gap:config-file>
-		<allow-navigation href="*" />
-	  <allow-intent href="*" />
-	  <access origin="*" />
+    </gap:config-file>
+
+	<allow-navigation href="*" />
+	<allow-intent href="*" />
+	<access origin="*" />
 	  
 </widget>
