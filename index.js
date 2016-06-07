@@ -19,17 +19,19 @@ function onError(error) {
     alert('code: '    + error.code    + '\n' +
           'message: ' + error.message + '\n');
 }
-
-function onLoad() {
-	alert('CARICAMENTO TERMINATO');
-	// Now safe to use device APIs
-	document.addEventListener('deviceready', function () {
-		alert('device ready');
-	    	document.getElementById("test_div").innerHTML = document.getElementById("test_div").innerHTML + "deviceReady"+"<br/>";
+function log(s){
+	document.getElementById("test_div").innerHTML = document.getElementById("test_div").innerHTML + s + "<br/>";
 	    	
+}
+function onLoad() {
+	log("onload");
+	document.addEventListener('deviceready', function () {
+		log("deviceReady");
 	    	cordova.plugins.backgroundMode.setDefaults({ text:'Doing heavy tasks.'});
+	    	log("defaults");
 	    	cordova.plugins.backgroundMode.enable();
-		/*cordova.plugins.backgroundMode.onactivate = function () {
+		log("enable");
+	    	/*cordova.plugins.backgroundMode.onactivate = function () {
 		    	document.getElementById("test_div").innerHTML = document.getElementById("test_div").innerHTML + "bg attivo" + "<br/>";
 		        setInterval(function () {
 		            vat d=new Date();
