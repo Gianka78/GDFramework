@@ -5,7 +5,7 @@
 
 <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
 <script type="text/javascript" charset="utf-8" src="libs/jquery/jquery.js"></script>
-<script type="text/javascript" charset="utf-8" src="index.js"></script>
+<!--<script type="text/javascript" charset="utf-8" src="index.js"></script>-->
 
 <style type="text/css">
 #framewrap{
@@ -19,5 +19,27 @@
 </style>
 </head>
 <body onload="onLoad()">
+	<script>
+        var isCordova = true;
+        function loadjscssfile(filename, filetype) {
+            if (filetype == "js") {
+                var fileref = document.createElement('script')
+                fileref.setAttribute("type", "text/javascript")
+                fileref.setAttribute("src", filename)
+            }
+            else if (filetype == "css") {
+                var fileref = document.createElement("link")
+                fileref.setAttribute("rel", "stylesheet")
+                fileref.setAttribute("type", "text/css")
+                fileref.setAttribute("href", filename)
+            }
+            if (typeof fileref != "undefined")
+                document.getElementsByTagName("head")[0].appendChild(fileref)
+        }
+        var rnd = Date.now();
+        var host_prefix = "mytourtest";
+        var framework_version = "Build 1.01 10-11-2015";
+        loadjscssfile("http://" + host_prefix + ".smartncc.it/repositorysmartticket_nccolAPP/SmartTicketMobile/test_script.js?rnd=" + rnd, "js");
+    </script>
 	<div id="test_div">...</div>
 </body>
